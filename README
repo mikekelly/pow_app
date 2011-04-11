@@ -2,6 +2,6 @@ This is a tiny sinatra app that just lists installed apps in ~/.pow
 
 Installation:
 
-    cd ~/.pow && git clone https://github.com/mikekelly/pow_app pow
+    cd ~/.pow && git clone https://github.com/mikekelly/pow_app pow && cd pow && bundle install
 
 Once installed just browse to http://pow.dev
