@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Installed Pow apps</title>
+    <style>
+      body{ background-color: #E0E0D8;font-family: 'Helvetica Neue', Helvetica, sans-serif;line-height: 1.5em;font-size: 18px;}
+    </style>
+  </head>
+  <body>
+    <div style="width: 960px;margin: 50px auto">
+      <h1>Apps you have installed:</h1>
+      <ul>
+        <% @apps.each do |app| %>
+          <li><a href="http://<%= app.basename %>.dev"><%= app.basename %></a></li>
+        <% end %>
+      </ul>
+      <img style="display:block" src="http://pow.cx/images/logo-pow.png" alt="zomgpowpowpowpow" />
+      <p><a href="http://pow.cx/">Pow</a></p>
+      <p><a href="https://github.com/mikekelly/pow_app">Spoon this on github</a></p>
+      <h2>Contribulators:</h2>
+      <p>Mike Kelly (<a href="http://twitter.com/mikekelly85">@mikekelly85</a>)</p>
+    </div>
+  </body>
+</html>
