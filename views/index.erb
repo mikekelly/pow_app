@@ -12,11 +12,13 @@
 		</div>
 		<table class="project_list">
 			<tr>
-				<th>projects</th>
+				<th>project</th>
+				<th>realpath</th>
 			</tr>
 			<% @apps.each_with_index do |app, index| %>
 			<tr class="<%= index % 2 == 0 ? 'dark' : 'light' %>">
 				<td><a href="http://<%= app.basename %>.dev" target="blank"><%= app.basename %></a></td>
+				<td><%= app.realpath %></td>
 			</tr>
 			<% end %>
 		</table>

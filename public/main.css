@@ -67,7 +67,6 @@ i {
 
 td, th {
   padding: 5px;
-  text-align: center;
 }
 
 .page_nav br {
@@ -126,7 +125,7 @@ td, th {
 .tree,
 .commit_search,
 .history {
-  width: 30%;
+  width: 60%;
   margin: 0 auto 15px auto;
   border: 1px solid #d8d8d8;
   -moz-box-shadow: 0 0 3px rgba(0,0,0,0.2);
