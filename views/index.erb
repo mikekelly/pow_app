@@ -1,25 +1,27 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Installed Pow apps</title>
-    <style>
-      body{ background-color: #E0E0D8;font-family: 'Helvetica Neue', Helvetica, sans-serif;line-height: 1.5em;font-size: 18px;}
-    </style>
-  </head>
-  <body>
-    <div style="width: 960px;margin: 50px auto">
-      <h1>Apps you have installed:</h1>
-      <ul>
-        <% @apps.each do |app| %>
-          <li><a href="http://<%= app.basename %>.dev"><%= app.basename %></a></li>
-        <% end %>
-      </ul>
-      <img style="display:block" src="http://pow.cx/images/logo-pow.png" alt="zomgpowpowpowpow" />
-      <p><a href="http://pow.cx/">Pow</a></p>
-      <p><a href="https://github.com/mikekelly/pow_app">Spoon this on github</a></p>
-      <h2>Contribulators:</h2>
-      <p>Mike Kelly (<a href="http://twitter.com/mikekelly85">@mikekelly85</a>)</p>
-      <p>Jamie Phelps (<a href="http://twitter.com/jxpx777">@jxpx777</a>)
-    </div>
-  </body>
+	<head>
+		<title>pow.dev</title>
+		<link rel="stylesheet" type="text/css" href="/main.css"/>
+	</head>
+	<body>
+		<div class="page_header">
+			<h1>
+				<a href="/">pow.dev</a>
+			</h1>
+		</div>
+		<table class="project_list">
+			<tr>
+				<th>projects</th>
+			</tr>
+			<% @apps.each_with_index do |app, index| %>
+			<tr class="<%= index % 2 == 0 ? 'dark' : 'light' %>">
+				<td><a href="http://<%= app.basename %>.dev" target="blank"><%= app.basename %></a></td>
+			</tr>
+			<% end %>
+		</table>
+		<div class="page_footer">
+			<img src="http://pow.cx/images/logo-pow.png" alt="zomgpowpowpowpow" />
+		</div>
+	</body>
 </html>
