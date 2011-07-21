@@ -11,7 +11,7 @@
       <h1>Apps you have installed:</h1>
       <ul>
         <% @apps.each do |app| %>
-          <li><a href="http://<%= app.basename %>.dev"><%= app.basename %></a></li>
+          <li><a href="http://<%= app.basename %>.dev"><%= app.basename %></a><% if @default == app.basename %>&nbsp;(<a href="http://localhost">default</a>)<% end %></li>
         <% end %>
       </ul>
       <img style="display:block" src="http://pow.cx/images/logo-pow.png" alt="zomgpowpowpowpow" />
