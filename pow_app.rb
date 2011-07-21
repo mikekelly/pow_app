@@ -3,7 +3,7 @@ require 'pathname'
 
 class PowApp < Sinatra::Base
   get('/') do
-    @apps = Pathname.new(ENV['HOME'] + '/.pow').children.select { |c| c.directory? }
+    @apps = Pathname.new(ENV['HOME'] + '/.pow').children.select { |c| !c.fnmatch?("**/.pow/pow") && !c.fnmatch?("**/.pow/default") && c.directory? }
     @default = nil
     begin
       default_path = Pathname.new(File.expand_path("~/.pow/default"))
