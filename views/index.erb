@@ -17,7 +17,7 @@
 			</tr>
 			<% @apps.each_with_index do |app, index| %>
 			<tr class="<%= index % 2 == 0 ? 'dark' : 'light' %>">
-				<td><a href="http://<%= app.basename %>.dev" target="blank"><%= app.basename %></a></td>
+				<td><a href="http://<%= app.basename %>.dev" target="blank"><%= app.basename %></a><% if @default == app.basename %>&nbsp;(<a href="http://localhost">default</a>)<% end %></td>
 				<td><%= app.realpath %></td>
 			</tr>
 			<% end %>
